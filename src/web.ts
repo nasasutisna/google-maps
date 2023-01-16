@@ -22,12 +22,17 @@ import type {
   TrafficLayerArgs,
   RemoveMarkersArgs,
   OnScrollArgs,
+  CircleOptions,
 } from './implementation';
 
 export class CapacitorGoogleMapsWeb
   extends WebPlugin
   implements CapacitorGoogleMapsPlugin
 {
+  addCircle(args: CircleOptions): Promise<void> {
+    console.log(args);
+    throw new Error('Method not implemented.');
+  }
   private gMapsRef: typeof google.maps | undefined = undefined;
   private maps: {
     [id: string]: {

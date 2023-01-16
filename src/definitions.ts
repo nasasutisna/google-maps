@@ -303,6 +303,7 @@ export interface MyLocationButtonClickCallbackData {
 export interface CircleOptions {
   radius: string;
   mapId: string;
+  // eslint-disable-next-line @typescript-eslint/ban-types
   center: Object;
   fillColor: string;
   strokeColor: string;

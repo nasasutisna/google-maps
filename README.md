@@ -272,6 +272,7 @@ export default MyMap;
 * [`create(...)`](#create)
 * [`enableClustering()`](#enableclustering)
 * [`disableClustering()`](#disableclustering)
+* [`addCircle(...)`](#addcircle)
 * [`addMarker(...)`](#addmarker)
 * [`addMarkers(...)`](#addmarkers)
 * [`removeMarker(...)`](#removemarker)
@@ -309,7 +310,7 @@ export default MyMap;
 ### create(...)
 
 ```typescript
-create(options: CreateMapArgs, callback?: MapListenerCallback<MapReadyCallbackData> | undefined) => Promise<GoogleMap>
+create(options: CreateMapArgs, callback?: MapListenerCallback<MapReadyCallbackData>) => Promise<GoogleMap>
 ```
 
 | Param          | Type                                                                                                                                |
@@ -336,6 +337,19 @@ enableClustering() => Promise<void>
 ```typescript
 disableClustering() => Promise<void>
 ```
+
+--------------------
+
+
+### addCircle(...)
+
+```typescript
+addCircle(options: CircleOptions) => Promise<void>
+```
+
+| Param         | Type                                                    |
+| ------------- | ------------------------------------------------------- |
+| **`options`** | <code><a href="#circleoptions">CircleOptions</a></code> |
 
 --------------------
 
@@ -499,7 +513,7 @@ setPadding(padding: MapPadding) => Promise<void>
 ### setOnBoundsChangedListener(...)
 
 ```typescript
-setOnBoundsChangedListener(callback?: MapListenerCallback<CameraIdleCallbackData> | undefined) => Promise<void>
+setOnBoundsChangedListener(callback?: MapListenerCallback<CameraIdleCallbackData>) => Promise<void>
 ```
 
 | Param          | Type                                                                                                                                    |
@@ -512,7 +526,7 @@ setOnBoundsChangedListener(callback?: MapListenerCallback<CameraIdleCallbackData
 ### setOnCameraIdleListener(...)
 
 ```typescript
-setOnCameraIdleListener(callback?: MapListenerCallback<CameraIdleCallbackData> | undefined) => Promise<void>
+setOnCameraIdleListener(callback?: MapListenerCallback<CameraIdleCallbackData>) => Promise<void>
 ```
 
 | Param          | Type                                                                                                                                    |
@@ -525,7 +539,7 @@ setOnCameraIdleListener(callback?: MapListenerCallback<CameraIdleCallbackData> |
 ### setOnCameraMoveStartedListener(...)
 
 ```typescript
-setOnCameraMoveStartedListener(callback?: MapListenerCallback<CameraMoveStartedCallbackData> | undefined) => Promise<void>
+setOnCameraMoveStartedListener(callback?: MapListenerCallback<CameraMoveStartedCallbackData>) => Promise<void>
 ```
 
 | Param          | Type                                                                                                                                                  |
@@ -538,7 +552,7 @@ setOnCameraMoveStartedListener(callback?: MapListenerCallback<CameraMoveStartedC
 ### setOnClusterClickListener(...)
 
 ```typescript
-setOnClusterClickListener(callback?: MapListenerCallback<ClusterClickCallbackData> | undefined) => Promise<void>
+setOnClusterClickListener(callback?: MapListenerCallback<ClusterClickCallbackData>) => Promise<void>
 ```
 
 | Param          | Type                                                                                                                                        |
@@ -551,7 +565,7 @@ setOnClusterClickListener(callback?: MapListenerCallback<ClusterClickCallbackDat
 ### setOnClusterInfoWindowClickListener(...)
 
 ```typescript
-setOnClusterInfoWindowClickListener(callback?: MapListenerCallback<ClusterClickCallbackData> | undefined) => Promise<void>
+setOnClusterInfoWindowClickListener(callback?: MapListenerCallback<ClusterClickCallbackData>) => Promise<void>
 ```
 
 | Param          | Type                                                                                                                                        |
@@ -564,7 +578,7 @@ setOnClusterInfoWindowClickListener(callback?: MapListenerCallback<ClusterClickC
 ### setOnInfoWindowClickListener(...)
 
 ```typescript
-setOnInfoWindowClickListener(callback?: MapListenerCallback<MarkerClickCallbackData> | undefined) => Promise<void>
+setOnInfoWindowClickListener(callback?: MapListenerCallback<MarkerClickCallbackData>) => Promise<void>
 ```
 
 | Param          | Type                                                                                                                                      |
@@ -577,7 +591,7 @@ setOnInfoWindowClickListener(callback?: MapListenerCallback<MarkerClickCallbackD
 ### setOnMapClickListener(...)
 
 ```typescript
-setOnMapClickListener(callback?: MapListenerCallback<MapClickCallbackData> | undefined) => Promise<void>
+setOnMapClickListener(callback?: MapListenerCallback<MapClickCallbackData>) => Promise<void>
 ```
 
 | Param          | Type                                                                                                                                |
@@ -590,7 +604,7 @@ setOnMapClickListener(callback?: MapListenerCallback<MapClickCallbackData> | und
 ### setOnMarkerClickListener(...)
 
 ```typescript
-setOnMarkerClickListener(callback?: MapListenerCallback<MarkerClickCallbackData> | undefined) => Promise<void>
+setOnMarkerClickListener(callback?: MapListenerCallback<MarkerClickCallbackData>) => Promise<void>
 ```
 
 | Param          | Type                                                                                                                                      |
@@ -603,7 +617,7 @@ setOnMarkerClickListener(callback?: MapListenerCallback<MarkerClickCallbackData>
 ### setOnMarkerDragStartListener(...)
 
 ```typescript
-setOnMarkerDragStartListener(callback?: MapListenerCallback<MarkerClickCallbackData> | undefined) => Promise<void>
+setOnMarkerDragStartListener(callback?: MapListenerCallback<MarkerClickCallbackData>) => Promise<void>
 ```
 
 | Param          | Type                                                                                                                                      |
@@ -616,7 +630,7 @@ setOnMarkerDragStartListener(callback?: MapListenerCallback<MarkerClickCallbackD
 ### setOnMarkerDragListener(...)
 
 ```typescript
-setOnMarkerDragListener(callback?: MapListenerCallback<MarkerClickCallbackData> | undefined) => Promise<void>
+setOnMarkerDragListener(callback?: MapListenerCallback<MarkerClickCallbackData>) => Promise<void>
 ```
 
 | Param          | Type                                                                                                                                      |
@@ -629,7 +643,7 @@ setOnMarkerDragListener(callback?: MapListenerCallback<MarkerClickCallbackData> 
 ### setOnMarkerDragEndListener(...)
 
 ```typescript
-setOnMarkerDragEndListener(callback?: MapListenerCallback<MarkerClickCallbackData> | undefined) => Promise<void>
+setOnMarkerDragEndListener(callback?: MapListenerCallback<MarkerClickCallbackData>) => Promise<void>
 ```
 
 | Param          | Type                                                                                                                                      |
@@ -642,7 +656,7 @@ setOnMarkerDragEndListener(callback?: MapListenerCallback<MarkerClickCallbackDat
 ### setOnMyLocationButtonClickListener(...)
 
 ```typescript
-setOnMyLocationButtonClickListener(callback?: MapListenerCallback<MyLocationButtonClickCallbackData> | undefined) => Promise<void>
+setOnMyLocationButtonClickListener(callback?: MapListenerCallback<MyLocationButtonClickCallbackData>) => Promise<void>
 ```
 
 | Param          | Type                                                                                                                                                          |
@@ -655,7 +669,7 @@ setOnMyLocationButtonClickListener(callback?: MapListenerCallback<MyLocationButt
 ### setOnMyLocationClickListener(...)
 
 ```typescript
-setOnMyLocationClickListener(callback?: MapListenerCallback<MapClickCallbackData> | undefined) => Promise<void>
+setOnMyLocationClickListener(callback?: MapListenerCallback<MapClickCallbackData>) => Promise<void>
 ```
 
 | Param          | Type                                                                                                                                |
@@ -697,7 +711,7 @@ For iOS and Android only the config options declared on <a href="#googlemapconfi
 | **`zoom`**             | <code>number</code>                       | Sets the zoom of the map.                                                                                                                                 |                    |       |
 | **`androidLiteMode`**  | <code>boolean</code>                      | Enables image-based lite mode on Android.                                                                                                                 | <code>false</code> |       |
 | **`devicePixelRatio`** | <code>number</code>                       | Override pixel ratio for native map.                                                                                                                      |                    |       |
-| **`styles`**           | <code>MapTypeStyle[] \| null</code>       | Styles to apply to each of the default map types. Note that for satellite, hybrid and terrain modes, these styles will only apply to labels and geometry. |                    | 4.3.0 |
+| **`styles`**           | <code>MapTypeStyle[]</code>               | Styles to apply to each of the default map types. Note that for satellite, hybrid and terrain modes, these styles will only apply to labels and geometry. |                    | 4.3.0 |
 
 
 #### LatLng
@@ -715,6 +729,57 @@ An interface representing a pair of latitude and longitude coordinates.
 | Prop        | Type                |
 | ----------- | ------------------- |
 | **`mapId`** | <code>string</code> |
+
+
+#### CircleOptions
+
+An interface representing the viewports latitude and longitude bounds.
+
+| Prop              | Type                                      |
+| ----------------- | ----------------------------------------- |
+| **`radius`**      | <code>string</code>                       |
+| **`mapId`**       | <code>string</code>                       |
+| **`center`**      | <code><a href="#object">Object</a></code> |
+| **`fillColor`**   | <code>string</code>                       |
+| **`strokeColor`** | <code>string</code>                       |
+| **`strokeWidth`** | <code>number</code>                       |
+
+
+#### Object
+
+Provides functionality common to all JavaScript objects.
+
+| Prop              | Type                                          | Description                                                                                                                                |
+| ----------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| **`constructor`** | <code><a href="#function">Function</a></code> | The initial value of <a href="#object">Object</a>.prototype.constructor is the standard built-in <a href="#object">Object</a> constructor. |
+
+| Method                   | Signature                                                 | Description                                                              |
+| ------------------------ | --------------------------------------------------------- | ------------------------------------------------------------------------ |
+| **toString**             | () =&gt; string                                           | Returns a string representation of an object.                            |
+| **toLocaleString**       | () =&gt; string                                           | Returns a date converted to a string using the current locale.           |
+| **valueOf**              | () =&gt; <a href="#object">Object</a>                     | Returns the primitive value of the specified object.                     |
+| **hasOwnProperty**       | (v: <a href="#propertykey">PropertyKey</a>) =&gt; boolean | Determines whether an object has a property with the specified name.     |
+| **isPrototypeOf**        | (v: <a href="#object">Object</a>) =&gt; boolean           | Determines whether an object exists in another object's prototype chain. |
+| **propertyIsEnumerable** | (v: <a href="#propertykey">PropertyKey</a>) =&gt; boolean | Determines whether a specified property is enumerable.                   |
+
+
+#### Function
+
+Creates a new function.
+
+| Prop            | Type                                          |
+| --------------- | --------------------------------------------- |
+| **`prototype`** | <code>any</code>                              |
+| **`length`**    | <code>number</code>                           |
+| **`arguments`** | <code>any</code>                              |
+| **`caller`**    | <code><a href="#function">Function</a></code> |
+
+| Method       | Signature                                                                            | Description                                                                                                                                                                                                              |
+| ------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **apply**    | (this: <a href="#function">Function</a>, thisArg: any, argArray?: any) =&gt; any     | Calls the function, substituting the specified object for the this value of the function, and the specified array for the arguments of the function.                                                                     |
+| **call**     | (this: <a href="#function">Function</a>, thisArg: any, ...argArray: any[]) =&gt; any | Calls a method of an object, substituting another object for the current object.                                                                                                                                         |
+| **bind**     | (this: <a href="#function">Function</a>, thisArg: any, ...argArray: any[]) =&gt; any | For a given function, creates a bound function that has the same body as the original function. The this object of the bound function is associated with the specified object, and has the specified initial parameters. |
+| **toString** | () =&gt; string                                                                      | Returns a string representation of a function.                                                                                                                                                                           |
 
 
 #### Marker
@@ -863,6 +928,11 @@ An interface representing the viewports latitude and longitude bounds.
 The callback function to be called when map events are emitted.
 
 <code>(data: T): void</code>
+
+
+#### PropertyKey
+
+<code>string | number | symbol</code>
 
 
 ### Enums

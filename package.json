@@ -1,7 +1,7 @@
 {
-  "name": "@capacitor/google-maps",
-  "version": "4.3.2",
-  "description": "Google maps on Capacitor",
+  "name": "@capacitor-custom-plugins/google-maps",
+  "version": "1.0.0",
+  "description": "Custom Google maps on Capacitor",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "typings": "dist/typings/index.d.ts",
@@ -20,14 +20,14 @@
     "ios/Plugin/",
     "CapacitorGoogleMaps.podspec"
   ],
-  "author": "Ionic <hi@ionicframework.com>",
+  "author": "nasasutisna7@gmail.com",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/capacitor-plugins.git"
+    "url": "https://github.com/nasasutisna/google-maps.git"
   },
   "bugs": {
-    "url": "https://github.com/ionic-team/capacitor-plugins/issues"
+    "url": "https://github.com/nasasutisna/google-maps.git"
   },
   "keywords": [
     "capacitor",

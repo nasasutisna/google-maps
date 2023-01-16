@@ -1,6 +1,6 @@
 package io.ionic.googlemapstest
 
-import com.capacitorjs.plugins.googlemaps.CapacitorGoogleMaps
+import com.capacitor.custom.plugins.googlemaps.CapacitorGoogleMaps
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith

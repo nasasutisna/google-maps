@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.googlemaps
+package com.capacitor.custom.plugins.googlemaps
 
 import com.google.android.gms.maps.GoogleMapOptions
 import com.google.android.gms.maps.model.CameraPosition

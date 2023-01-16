@@ -3,13 +3,13 @@ import { registerPlugin } from '@capacitor/core';
 
 import type {
   CameraConfig,
-  CircleOptions,
   GoogleMapConfig,
   LatLngBounds,
   MapPadding,
   MapType,
-  Marker,
+  Marker
 } from './definitions';
+
 
 /**
  * An interface containing the options used when creating a map.
@@ -104,6 +104,16 @@ export interface OnScrollArgs {
     width: number;
     height: number;
   };
+}
+
+export interface CircleOptions {
+  radius: string;
+  mapId: string;
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  center: Object;
+  fillColor: string;
+  strokeColor: string;
+  strokeWidth: number;
 }
 
 export interface CapacitorGoogleMapsPlugin extends Plugin {

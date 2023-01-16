@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.googlemaps
+package com.capacitor.custom.plugins.googlemaps
 
 import android.graphics.Color
 import android.util.Size

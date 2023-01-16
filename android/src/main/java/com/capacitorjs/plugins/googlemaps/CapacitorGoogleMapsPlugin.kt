@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.googlemaps
+package com.capacitor.custom.plugins.googlemaps
 
 import android.Manifest
 import android.annotation.SuppressLint
